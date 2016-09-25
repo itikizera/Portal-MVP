@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s0="http://localhost:69/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://localhost:69/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost:69/">
+      <s:element name="AUTHUSERSIGA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AUTUSER" type="s0:STRAUTUSER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AUTHUSERSIGARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AUTHUSERSIGARESULT" type="s0:DADOSUSUARIO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETDBCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PRMGETDBCC" type="s0:STRGETDBCC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETDBCCRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETDBCCRESULT" type="s0:STRRETXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETDBSRA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PRMGETDBSRA" type="s0:STRGETDBSRA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETDBSRARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETDBSRARESULT" type="s0:STRRETXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETSRA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PRMGETSRA" type="s0:STRGETSRA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETSRARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETSRARESULT" type="s0:STRRETXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="STRAUTUSER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="REGEMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REGNOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REGPERFIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REGSENHA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USERLOGIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USERSENHA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USERTIPO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRGETDBCC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BUSCA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FILIAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INDICE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRGETDBSRA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BUSCA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FILIAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INDICE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRGETSRA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BUSCA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FILIAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INDICE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="STRRETXML">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="XML" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DADOSUSUARIO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOJA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LRET" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMECOMPLETO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOUSER" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="AUTHUSERSIGASOAPIN">
+    <part name="parameters" element="s0:AUTHUSERSIGA" />
+  </message>
+  <message name="AUTHUSERSIGASOAPOUT">
+    <part name="parameters" element="s0:AUTHUSERSIGARESPONSE" />
+  </message>
+  <message name="GETDBCCSOAPIN">
+    <part name="parameters" element="s0:GETDBCC" />
+  </message>
+  <message name="GETDBCCSOAPOUT">
+    <part name="parameters" element="s0:GETDBCCRESPONSE" />
+  </message>
+  <message name="GETDBSRASOAPIN">
+    <part name="parameters" element="s0:GETDBSRA" />
+  </message>
+  <message name="GETDBSRASOAPOUT">
+    <part name="parameters" element="s0:GETDBSRARESPONSE" />
+  </message>
+  <message name="GETSRASOAPIN">
+    <part name="parameters" element="s0:GETSRA" />
+  </message>
+  <message name="GETSRASOAPOUT">
+    <part name="parameters" element="s0:GETSRARESPONSE" />
+  </message>
+  <portType name="PORTALMVPSOAP">
+    <operation name="AUTHUSERSIGA">
+      <documentation>Autenticacao de Usuarios</documentation>
+      <input message="s0:AUTHUSERSIGASOAPIN" />
+      <output message="s0:AUTHUSERSIGASOAPOUT" />
+    </operation>
+    <operation name="GETDBCC">
+      <documentation>Retorna Dados para Dashboard de Funcionario por Centro de Custo</documentation>
+      <input message="s0:GETDBCCSOAPIN" />
+      <output message="s0:GETDBCCSOAPOUT" />
+    </operation>
+    <operation name="GETDBSRA">
+      <documentation>Retorna Dados para Dashboard de Funcionario SRA</documentation>
+      <input message="s0:GETDBSRASOAPIN" />
+      <output message="s0:GETDBSRASOAPOUT" />
+    </operation>
+    <operation name="GETSRA">
+      <documentation>Retorna Busca por Funcionario SRA</documentation>
+      <input message="s0:GETSRASOAPIN" />
+      <output message="s0:GETSRASOAPOUT" />
+    </operation>
+  </portType>
+  <binding name="PORTALMVPSOAP" type="s0:PORTALMVPSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AUTHUSERSIGA">
+      <soap:operation soapAction="http://localhost:69/AUTHUSERSIGA" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETDBCC">
+      <soap:operation soapAction="http://localhost:69/GETDBCC" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETDBSRA">
+      <soap:operation soapAction="http://localhost:69/GETDBSRA" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETSRA">
+      <soap:operation soapAction="http://localhost:69/GETSRA" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PORTALMVP">
+    <documentation>WEBSERVICE do Portal On Line PORTAL MVP</documentation>
+    <port name="PORTALMVPSOAP" binding="s0:PORTALMVPSOAP">
+      <soap:address location="http://localhost:69/PORTALMVP.apw" />
+    </port>
+  </service>
+</definitions>
